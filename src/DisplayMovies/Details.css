@@ -1,0 +1,114 @@
+/* 🎬 Whole details page */
+.movie-details {
+    display: flex;
+    flex-direction: column; /* Mobile default */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    color: #fff;
+    background-color: #191c21;
+    min-height: 100vh;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+
+    max-width: 1200px;   /* Keep content centered on big screens */
+    margin: 0 auto;      /* Horizontally center */
+    box-sizing: border-box;
+}
+
+/* 🎥 Poster */
+.poster img {
+    width: 100%;
+    max-width: 320px; /* Never grows bigger than this */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
+}
+
+.info-section {
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Title */
+.movie-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.year {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+/* Genres */
+.genres {
+    margin: 1rem 0;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+/* Rating */
+.rating {
+    width: 200px;
+    margin: 1rem 0;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+.rating p {
+    font-size: 1.8rem;
+    color: goldenrod;
+    margin-top: 0.5rem;
+}
+
+/* Plot */
+.movie-plot {
+    margin-top: 1.5rem;
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.back-btn {
+    padding: 9px 20px;
+    margin-top: 1.5rem;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* 💻 Desktop layout */
+@media (min-width: 768px) {
+    .movie-details {
+        flex-direction: row;       /* Poster left, info right */
+        align-items: flex-start;
+        justify-content: center;   /* Make both poster + info sit centered */
+    }
+
+    .info-section {
+        text-align: left;
+        margin-left: 2rem;
+        flex: 1;                   /* Allow text to take remaining space */
+    }
+
+    .movie-title {
+        font-size: 2.8rem;
+    }
+}

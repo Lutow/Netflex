@@ -1,0 +1,69 @@
+.search-container {
+    margin: 20px;
+    text-align: center;
+}
+
+.results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    background: #0c0c0c;
+    border-radius: 12px;
+    margin: 30px auto;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.no-results::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-size: 400% 400%;
+    animation: gradientShift 3s ease infinite;
+}
+
+.no-results .emoji {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 15px;
+    animation: bounce 2s infinite;
+}
+
+.no-results .title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.no-results .subtitle {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.more-btn {
+    padding: 8px 16px;
+    margin-top: 1.5rem;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
