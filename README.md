@@ -1,6 +1,6 @@
 # Netflex
 
-Netflex is a movie browsing full-stack app fetching data drom TMDB.
+Netflex is a movie browsing React.js app fetching data drom TMDB.
 
 To run the project:
 
